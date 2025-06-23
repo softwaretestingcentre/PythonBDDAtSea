@@ -4,7 +4,7 @@ Feature: Customers can buy artwork
     Given Betty adds items to her basket
       | Item              | Count | Price |
       | Unusable Security | 1     | 2     |
-    Then she can see her basket contains only her chosen items
+    Then she can see her basket contains only "Unusable Security"
 
 #  Scenario: Betty chooses multiple copies of "Experimental"
 #    Given Betty adds items to her basket
