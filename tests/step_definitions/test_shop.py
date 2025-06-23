@@ -19,7 +19,7 @@ def add_to_basket(basket, datatable):
         basket["contents"].append(row[0])
 
 
-@then(parsers.parse('she can see her basket contains only "{item}"'))
-def confirm_basket(basket, item):
-    items = [item]
-    return check.equal(items, basket["contents"])
+@then(parsers.parse("she can see her basket contains only {string}"))
+def confirm_basket(basket, string):
+    items = [string[1:-1]]
+    check.equal(items, basket["contents"])
